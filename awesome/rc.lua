@@ -275,7 +275,13 @@ clientkeys = awful.util.table.join(
         function (c)
             c.maximized_horizontal = not c.maximized_horizontal
             c.maximized_vertical   = not c.maximized_vertical
-        end)
+        end),
+    awful.key({ modkey, "Shift" }, "Next",  function () awful.client.moveresize( 20,  20, -40, -40) end),
+    awful.key({ modkey, "Shift" }, "Prior", function () awful.client.moveresize(-20, -20,  40,  40) end),
+    awful.key({ modkey, "Shift" }, "Down",  function () awful.client.moveresize(  0,  20,   0,   0) end),
+    awful.key({ modkey, "Shift" }, "Up",    function () awful.client.moveresize(  0, -20,   0,   0) end),
+    awful.key({ modkey, "Shift" }, "Left",  function () awful.client.moveresize(-20,   0,   0,   0) end),
+    awful.key({ modkey, "Shift" }, "Right", function () awful.client.moveresize( 20,   0,   0,   0) end)
 )
 
 -- Compute the maximum number of digit we need, limited to 9
