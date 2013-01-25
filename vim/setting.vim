@@ -1,28 +1,14 @@
-" google.vim -- Google coding style and Google filetype support for Vim
-"
 " Installation:
-" To install google.vim, add the following to your .vimrc:
-"
-"    source /usr/share/vim/google/google.vim
-"
-" (This relies on inept to install the vim-google-config package.  This should
-" happen by default on any desktop workstation.)
-"
 " If you want syntax highlighting enabled, it's suggested that you enable it
 " *before* sourcing this script by adding "syntax on" to your .vimrc
 "
-"
-" Getting Help:
-" If you run into problems, please email vi-users.
-"
-"
 " Overriding Settings:
-" Many of the settings made by google.vim are performed via autocmds/ftplugins.
+" Many of the settings are performed via autocmds/ftplugins.
 " This means that you cannot override these settings just by making your own
-" settings in your .vimrc (since the google.vim setting will end up triggering
+" settings in your .vimrc (since the setting will end up triggering
 " later, undoing your attempted override). If you need to override a setting the
-" easiest way to do this is to create your own autocmd after sourcing
-" google.vim. For example, to change textwidth to 80 for .java files:
+" easiest way to do this is to create your own autocmd after sourcing.
+" For example, to change textwidth to 80 for .java files:
 "
 "   autocmd BufNewFile,BufRead *.java setlocal textwidth=80
 "
@@ -37,14 +23,6 @@
 "   Disable autogen: let g:disable_google_boilerplate=1
 "   Disable tool usage statistics logging: let g:disable_google_logging=1
 "   Disable most settings changes: let g:disable_google_optional_settings=1
-"
-"
-" Contributing:
-" google.vim and related scripts are in //depot/eng/vim/...
-" Submitting changes to these files will have no effect until vim-google-config
-" is updated.  Typically someone (spectral) notices changes to this directory
-" and pushes a new version of the package, but it might be a slow rollout unless
-" you remind him. :)
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 

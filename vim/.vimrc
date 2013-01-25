@@ -9,4 +9,4 @@ filetype plugin indent on
 :set wrap
 highlight OverLength ctermbg=darkred ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
-source ~/config-vc/vim/google.vim
+source ~/config-vc/vim/setting.vim
