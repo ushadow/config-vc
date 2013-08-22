@@ -10,6 +10,9 @@ require("naughty")
 -- Load Debian menu entries
 require("debian.menu")
 
+-- Volume widget
+require("volume")
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -37,7 +40,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+beautiful.init(awful.util.getdir("config") .. "/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
@@ -180,6 +183,7 @@ for s = 1, screen.count() do
         },
         mylayoutbox[s],
         mytextclock,
+        volume_widget,
         s == 1 and mysystray or nil,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
@@ -254,7 +258,13 @@ globalkeys = awful.util.table.join(
                   awful.util.getdir("cache") .. "/history_eval")
               end),
      awful.key({ modkey }, "F12",
-               function() awful.util.spawn("xscreensaver-command -lock") end)
+               function() awful.util.spawn("xscreensaver-command -lock") end),
+     awful.key({ }, "XF86AudioRaiseVolume", function ()
+       awful.util.spawn("amixer set Master 9%+") end),
+     awful.key({ }, "XF86AudioLowerVolume", function ()
+       awful.util.spawn("amixer set Master 9%-") end),
+     awful.key({ }, "XF86AudioMute", function ()
+           awful.util.spawn("amixer -D pulse set Master 1+ toggle") end)
 )
 
 clientkeys = awful.util.table.join(
