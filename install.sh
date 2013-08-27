@@ -2,6 +2,7 @@
 
 # awesome
 AWESOME_DIR=~/.config/awesome
+mkdir -p $AWESOME_DIR
 ln -sf $PWD/awesome/rc.lua $AWESOME_DIR/rc.lua
 ln -sf $PWD/awesome/volume.lua $AWESOME_DIR/volume.lua
 if [ ! -d $AWESOME_DIR/themes ]; then
