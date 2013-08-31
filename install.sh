@@ -21,7 +21,8 @@ if [ $OSTYPE == 'msys' ]; then
   VIM_DIR=vimfiles
 fi
 
-mkdir -p ~/$VIM_DIR/autoload ~/$VIM_DIR/bundle
+ln -sf $PWD/vim/bundle ~/$VIM_DIR/bundle
+mkdir -p ~/$VIM_DIR/autoload 
 
 PATHOGEN=$PWD/vim/pathogen/autoload/pathogen.vim
 PATHOGEN_LINK=~/$VIM_DIR/autoload/pathogen.vim
