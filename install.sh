@@ -8,12 +8,12 @@ ln -sf $PWD/awesome/volume.lua $AWESOME_DIR/volume.lua
 if [ ! -d $AWESOME_DIR/themes ]; then
   ln -sf $PWD/awesome/themes $AWESOME_DIR/themes
 fi
-echo "Made soft links for awesome config files."
+echo "Made sym links for awesome config files."
 
 # vim
 VIMRC=.vimrc
 ln -sf $PWD/vim/$VIMRC ~/$VIMRC
-echo "Made soft link of $VIMRC"
+echo "Made a sym link of $VIMRC"
 
 VIM_DIR=.vim
 
