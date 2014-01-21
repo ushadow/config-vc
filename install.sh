@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# awesome
+ln -sf $PWD/.bash_aliases ~/.bash_aliases
+
+# link awesome files
 AWESOME_DIR=~/.config/awesome
 mkdir -p $AWESOME_DIR
 ln -sf $PWD/awesome/rc.lua $AWESOME_DIR/rc.lua
@@ -10,7 +12,7 @@ if [ ! -d $AWESOME_DIR/themes ]; then
 fi
 echo "Made sym links for awesome config files."
 
-# vim
+# link vim files
 VIMRC=.vimrc
 ln -sf $PWD/vim/$VIMRC ~/$VIMRC
 echo "Made a sym link of $VIMRC"
@@ -21,6 +23,7 @@ if [ $OSTYPE == 'msys' ]; then
   VIM_DIR=vimfiles
 fi
 
+mkdir -p $VIM_DIR
 ln -sf $PWD/vim/bundle ~/$VIM_DIR/bundle
 mkdir -p ~/$VIM_DIR/autoload 
 
