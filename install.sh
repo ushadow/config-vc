@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ln -sf $PWD/.bash_aliases ~/.bash_aliases
+ln -sf $PWD/.xinitrc ~/.xinitrc
 
 # link awesome files
 AWESOME_DIR=~/.config/awesome

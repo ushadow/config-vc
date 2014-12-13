@@ -397,4 +397,4 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 awful.util.spawn_with_shell("xscreensaver -no-splash")
 awful.util.spawn_with_shell("dropbox start")
 awful.util.spawn_with_shell("setxkbmap -option compose:ralt")
-
+awful.util.spawn_with_shell("~/.screenlayout/default.sh")
