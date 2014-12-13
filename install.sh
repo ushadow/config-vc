@@ -8,7 +8,7 @@ AWESOME_DIR=~/.config/awesome
 if [ ! -d $AWESOME_DIR ]; then
   ln -sf $PWD/awesome $AWESOME_DIR
 fi
-echo "Made sym links for awesome config files."
+echo "Made sym link for awesome config directory."
 
 # link vim files
 VIMRC=.vimrc
