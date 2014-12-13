@@ -6,7 +6,7 @@ battery_widget = widget({type = "textbox", name = "battery_textbox",
 --battery_timer:start()
 --
 function batteryInfo(adapter)
-  local fcur = io.open("/sys/class/power_supply/"..adapter.."/power_now")    
+  local fcur = io.open("/sys/class/power_supply/"..adapter.."/energy_now")    
   local fcap = io.open("/sys/class/power_supply/"..adapter.."/energy_full")
   local fsta = io.open("/sys/class/power_supply/"..adapter.."/status")
   if fcur and fcap and fsta then
