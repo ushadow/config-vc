@@ -5,11 +5,8 @@ ln -sf $PWD/.xinitrc ~/.xinitrc
 
 # link awesome files
 AWESOME_DIR=~/.config/awesome
-mkdir -p $AWESOME_DIR
-ln -sf $PWD/awesome/rc.lua $AWESOME_DIR/rc.lua
-ln -sf $PWD/awesome/volume.lua $AWESOME_DIR/volume.lua
-if [ ! -d $AWESOME_DIR/themes ]; then
-  ln -sf $PWD/awesome/themes $AWESOME_DIR/themes
+if [ ! -d $AWESOME_DIR ]; then
+  ln -sf $PWD/awesome $AWESOME_DIR
 fi
 echo "Made sym links for awesome config files."
 

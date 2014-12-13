@@ -28,6 +28,8 @@ set ai "Auto indent
 set si "Smart indent
 set wrap
 
+cabbr <expr> %% expand('%:p:h')
+
 "yank and paste go to a register delete and cut does not share
 noremap  y "-y
 noremap  Y "-Y
