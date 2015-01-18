@@ -327,6 +327,10 @@ for i = 1, keynumber do
                   function ()
                       if client.focus and tags[client.focus.screen][i] then
                           awful.client.movetotag(tags[client.focus.screen][i])
+                          local screen = mouse.screen
+                          if tags[screen][i] then
+                            awful.tag.viewonly(tags[screen][i])
+                          end 
                       end
                   end),
         awful.key({ modkey, "Control", "Shift" }, "#" .. i + 9,
