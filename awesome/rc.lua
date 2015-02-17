@@ -203,6 +203,7 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
+    right_layout:add(spacer)
     right_layout:add(volpct)
     right_layout:add(spacer)
     right_layout:add(batpct)
@@ -472,3 +473,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 awful.util.spawn_with_shell("~/.screenlayout/default.sh")
+awful.util.spawn_with_shell("xscreensaver -no-splash")
+awful.util.spawn_with_shell("dropbox start")
+awful.util.spawn_with_shell("setxkbmap -option compose:ralt")
