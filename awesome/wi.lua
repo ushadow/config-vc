@@ -3,6 +3,7 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 local vicious = require("vicious")
 local naughty = require("naughty")
+local custom_widgets = require("custom_widgets")
 
 -- {{{ BATTERY
 -- Charge %
@@ -41,6 +42,6 @@ wifiicon = wibox.widget.imagebox()
 wifiicon:set_image(beautiful.widget_wifi)
 --
 wifi = wibox.widget.textbox()
-vicious.register(wifi, vicious.widgets.wifi,
+vicious.register(wifi, custom_widgets.wifi,
                  "${ssid} Rate: ${rate}MB/s Link: ${linp}%", 3, "wlan0")
 -- End Wifi }}}

@@ -17,7 +17,7 @@ require("debian.menu")
 
 -- Vicous + Widgets
 vicious = require("vicious")
-local widgets = require("widgets")
+local wi = require("wi")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
